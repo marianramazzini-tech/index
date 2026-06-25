@@ -26,6 +26,7 @@
             line-height: 1.6;
         }
 
+        /* --- NAVEGACIÓN --- */
         nav {
             position: fixed;
             top: 0;
@@ -87,6 +88,8 @@
         }
         .hamburger::before { top: -6px; }
         .hamburger::after { top: 6px; }
+
+        /* --- MENÚ LATERAL DESPLEGABLE --- */
         .side-menu {
             position: fixed;
             top: 0;
@@ -135,6 +138,7 @@
 
         .side-menu a:hover { padding-left: 15px; color: var(--oro-viejo); }
 
+        /* --- SECCIÓN HERO --- */
         header {
             height: 100vh;
             display: flex;
@@ -168,6 +172,7 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
+        /* --- ESTILOS DE CONTENIDO GENERAL --- */
         .content-section {
             padding: 120px 40px;
             max-width: 1100px;
@@ -185,7 +190,7 @@
             display: block;
         }
 
-        .nosotros-title {
+        .section-title-premium {
             font-size: 2.5rem;
             font-weight: 300;
             letter-spacing: 2px;
@@ -193,7 +198,7 @@
             color: var(--verde-eucalipto);
         }
 
-        .nosotros-grid {
+        .nosotros-grid, .temporada-grid {
             display: flex;
             justify-content: space-between;
             gap: 60px;
@@ -201,9 +206,9 @@
             margin-top: 40px;
         }
 
-        .nosotros-col { flex: 1; }
+        .nosotros-col, .temporada-col { flex: 1; }
 
-        .nosotros-col h3 {
+        .nosotros-col h3, .temporada-col h3 {
             font-size: 1.6rem;
             font-weight: 400;
             margin-bottom: 15px;
@@ -219,12 +224,20 @@
             color: var(--verde-suave);
         }
 
+        /* Fondo especial para diferenciar secciones */
+        .bg-alt {
+            background-color: var(--crema-seda);
+            max-width: 100%;
+            border-top: 1px solid rgba(44, 62, 53, 0.05);
+            border-bottom: 1px solid rgba(44, 62, 53, 0.05);
+        }
+
         @media (max-width: 768px) {
             nav { padding: 20px; }
             .submenu { display: none; }
             h1 { font-size: 3rem; letter-spacing: 12px; }
             .side-menu { width: 100%; }
-            .nosotros-grid { flex-direction: column; gap: 40px; text-align: center; }
+            .nosotros-grid, .temporada-grid { flex-direction: column; gap: 40px; text-align: center; }
             .content-section { padding: 80px 20px; }
         }
     </style>
@@ -235,7 +248,7 @@
         <div class="submenu">
             <a href="#nosotras">Nosotras</a>
             <a href="#arreglos">Arreglos</a>
-            <a href="#flores">Temporada</a>
+            <a href="#temporada">Temporada</a>
             <a href="#suscripciones">Suscripciones</a>
             <a href="#guia">Guía</a>
         </div>
@@ -250,6 +263,7 @@
         <div class="close-menu" onclick="toggleMenu()">×</div>
         <h2>Descubrir</h2>
         <a href="#nosotras" onclick="toggleMenu()">Nosotras</a>
+        <a href="#temporada" onclick="toggleMenu()">Temporada</a>
         <a href="#">Galería de Arte</a>
         <a href="#">El Blog Botánico</a>
         <a href="#">Talleres</a>
@@ -266,7 +280,7 @@
 
     <section class="content-section" id="nosotras">
         <span class="section-tag">Nuestra Esencia</span>
-        <h2 class="nosotros-title">Creado por dos hermanas, de la tierra a tu hogar.</h2>
+        <h2 class="section-title-premium">Creado por dos hermanas, de la tierra a tu hogar.</h2>
         
         <div class="nosotros-grid">
             <div class="nosotros-col">
@@ -284,6 +298,31 @@
             </div>
         </div>
     </section>
+
+    <div class="bg-alt" id="temporada">
+        <section class="content-section">
+            <span class="section-tag">Ciclos de la Tierra</span>
+            <h2 class="section-title-premium" style="max-width: 700px; margin-left: auto; margin-right: auto;">Aceptamos el ritmo de la naturaleza.</h2>
+            <p class="manifiesto" style="max-width: 800px; margin: 0 auto 60px auto; text-align: center;">
+                La naturaleza no tiene prisa y no repite sus paisajes. En RAMA no forzamos los cultivos ni prometemos los mismos ramos todo el año; preferimos celebrar la belleza real de cada época. Diseñamos tu entrega mensual con lo que brota con más fuerza y frescura, haciendo de cada caja una sorpresa botánica irrepetible.
+            </p>
+            
+            <div class="temporada-grid">
+                <div class="temporada-col">
+                    <h3>Follajes Frescos</h3>
+                    <p class="manifiesto" style="font-size: 1.05rem;">
+                        La estructura verde de tu espacio. Seleccionamos cuidadosamente variedades de eucalipto aromático, ramas de olivo silvestre, helechos y brotes texturizados que purifican el ambiente y aportan esa dosis vital de aire limpio a tu rincón favorito.
+                    </p>
+                </div>
+                <div class="temporada-col">
+                    <h3>Texturas y Aromas</h3>
+                    <p class="manifiesto" style="font-size: 1.05rem;">
+                        Una caricia para los sentidos. Integramos flores locales seleccionadas por su durabilidad, acompañadas de tallos aromáticos de lavanda o romero, para que el acto de limpiar y acomodar tus ramas sea una verdadera terapia de relajación en casa.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <script>
         function toggleMenu() {
