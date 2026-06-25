@@ -261,7 +261,7 @@
     <div class="side-menu" id="sideMenu">
         <div class="close-menu" onclick="toggleMenu()">×</div>
         <h2>Descubrir</h2>
-        <a href="#nosotras" onclick="toggleMenu()">Nuestra Historia</a>
+        <a href="#nosotras" onclick="toggleMenu()">Nosotras</a>
         <a href="#">Galería de Arte</a>
         <a href="#">El Blog Botánico</a>
         <a href="#">Talleres</a>
@@ -275,3 +275,34 @@
         <h1>RAMA</h1>
         <div class="slogan">Respira naturaleza en tu espacio.</div>
     </header>
+
+    <section class="content-section" id="nosotras">
+        <span class="section-tag">Nuestra Esencia</span>
+        <h2 class="nosotros-title">Creado por dos hermanas, de la tierra a tu hogar.</h2>
+        
+        <div class="nosotros-grid">
+            <div class="nosotros-col">
+                <h3>Un gusto compartido</h3>
+                <p class="manifiesto">
+                    Siempre nos ha fascinado la naturaleza; esa sensación de frescura cuando entras a un lugar lleno de plantas, el aroma a tierra mojada y la paz que transmite ver brotar un nuevo capullo. Somos dos hermanas que disfrutan el proceso real de tocar la tierra, limpiar los tallos y ver cómo una simple rama verde puede cambiar por completo la armonía y el aire de una habitación.
+                </p>
+            </div>
+            
+            <div class="nosotros-col">
+                <h3>Conectar con lo vivo</h3>
+                <p class="manifiesto">
+                    Diseñamos esta membresía para que tú también vivas el proceso que a nosotras nos apasiona. Al abrir tu caja, te invitamos a tocar la naturaleza, a oler el eucalipto fresco, a cortar los tallos y a decidir cómo fluye cada rama en el florero del mes. Es un momento para desconectar de la prisa y conectar con lo vivo, regalándole a tu dormitorio, sala u oficina un respiro de aire puro.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('sideMenu');
+            menu.classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>
